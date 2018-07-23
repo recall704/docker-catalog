@@ -1,0 +1,14 @@
+
+
+# docker image
+IMAGE: bitnami/redis:latest
+
+
+# password for redis
+PASSWORD: toor1
+
+# port with bridge network
+PORT: 6379
+
+# restart policy : always
+RESTART_POLICY: unless-stopped

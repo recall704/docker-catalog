@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  postgres:
+    image: {{ IMAGE }}
+    environment:
+      POSTGRES_USER: {{ USER_NAME }}
+      POSTGRES_PASSWORD: {{ PASSWORD }}
+      PGDATA: /data/postgres
+    volumes:
+       - /data/postgres
+    ports:
+      - "{{ PORT }}:5432"
+    networks:
+      - postgres
+    restart: {{ RESTART_POLICY }}
+
+
+networks:
+  postgres:
+    driver: bridge

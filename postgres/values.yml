@@ -1,0 +1,16 @@
+
+
+# docker image
+IMAGE: postgres:latest
+
+# username for postgresql
+USER_NAME: postgres
+
+# password for postgresql
+PASSWORD: postgres
+
+# port with bridge network
+PORT: 5432
+
+# restart policy : always
+RESTART_POLICY: unless-stopped
