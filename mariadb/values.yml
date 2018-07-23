@@ -1,0 +1,18 @@
+
+
+# docker image
+IMAGE: 'bitnami/mariadb:latest'
+
+
+# password for mariadb root user
+PASSWORD: toor1
+
+MARIADB_USER: foo
+MARIADB_PASSWORD: bar
+MARIADB_DATABASE: test
+
+# port with bridge network
+PORT: 3306
+
+# restart policy : always
+RESTART_POLICY: unless-stopped

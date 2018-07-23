@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  mariadb:
+    image: {{ IMAGE }}
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '{{ PORT }}:3306'
+    volumes:
+      - 'mariadb_data:/bitnami'
+    environment:
+      - MARIADB_ROOT_PASSWORD={{ PASSWORD }}
+      - MARIADB_USER={{ MARIADB_USER }}
+      - MARIADB_PASSWORD={{ MARIADB_PASSWORD }}
+      - MARIADB_DATABASE={{ MARIADB_DATABASE }}
+    restart: {{ RESTART_POLICY }}
+
+volumes:
+  mariadb_data:
+    driver: local
