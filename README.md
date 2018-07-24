@@ -14,7 +14,7 @@ pip install docker-compose
 pip install meta-compose
 ```
 
-### 3. use meta-compose genrate `docker-compose.yml`
+### 3. use meta-compose generate `docker-compose.yml`
 
 ```bash
 meta-compose -d values.yml
